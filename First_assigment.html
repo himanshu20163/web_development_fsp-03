@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+</head>
+<body>
+    <div id="root">
+
+    </div>
+    <script>
+        let br = React.createElement("br");
+        let style_data = {
+            fontSize:"21px",
+            fontWeight:"bold",
+        }
+        let start = React.createElement("a",{href:"#",style:style_data},"Getting started with the web");
+        let start_para = React.createElement("p",null,"Lorem Ipsum is simply dummy text of the printing and typesetting industry.")
+        let Html_head = React.createElement("a",{href:"#",style:style_data},"HTML - Structure the web");
+        let html_para = React.createElement("p",null,"The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser");
+        let css_para = React.createElement("p",null,"Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in a markup language such as HTML or XML. CSS is a cornerstone technology of the World Wide Web");
+        let css_head = React.createElement("a",{href:"#",style:style_data},"Css - Structure the web");
+        let h1 = React.createElement("h1",null,"Topics Covered");
+        let para = React.createElement("p",null,`The following is a list of all the topics . we cover`);
+
+        let div = React.createElement("div",null,h1,[para,start,start_para,Html_head,html_para,css_head,css_para]);
+        ReactDOM.render(div,document.getElementById('root'));
+        </script>
+</body>
+</html>
