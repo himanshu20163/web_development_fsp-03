@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+</head>
+<body>
+    <div id="root">
+        <ul>
+            <li>asdsajda</li>
+        </ul>
+    </div>
+    <script>
+        let btn_style = {
+            backgroundColor: "#9b45e4",
+                    color: "white",
+                    padding: "15px 25px",
+                    margin: "25px",
+                    borderRadius: "10px",
+                    borderStyle:"none",
+        }
+        function cards() {
+            let br = React.createElement("br",null);
+            let posts_para = React.createElement("p",{
+                style:{
+                    fontSize:"18px",
+                    
+            }},`172 br POSTS`)
+
+            let post_div = React.createElement("div",{
+                style:{
+                    margin:"0px 20px",
+                }
+            },posts_para);
+
+            let posts_follower = React.createElement("p",{
+                style:{
+                    fontSize:"18px",
+            }
+            },`47 br FOLLOWERS`)
+            let follow_div = React.createElement("div",{
+                style:{
+                    margin:"0px 20px",
+                }
+            },posts_follower);
+
+            let posts_following = React.createElement("p",{
+                style:{
+                    fontSize:"15px",
+            }
+            },`20 br FOLLOWING`)
+            let posts_div = React.createElement("div",{
+                style:{
+                    margin:"0px 20px",
+                }
+            },posts_following);
+            
+            let button_follow = React.createElement("button",{
+                style:btn_style
+            },"FOLLOW");
+
+            let button_messages = React.createElement("button",{
+                style:btn_style,
+            },"MESSAGE");
+
+            let btn_div = React.createElement("div",{
+                style:{
+                    display:"flex",
+                    width:"100%",
+                    height:"150px",
+                    justifyContent:"center",
+                    alignItems:"center",
+                }
+            },button_follow,button_messages);
+
+            let show_details = React.createElement("div",{
+                style:{
+                    height:"60px",
+                    width:"100%",
+                    display:"flex",
+                }
+            },post_div,follow_div,posts_div)
+        
+         let h1 = React.createElement("h1",{
+            style:{
+                fontSize:"21px",
+            }
+         },"Himanshu Sahu") 
+         let p1 = React.createElement("p",null,"i enjoy drinking a cup of coffie every day");
+
+         let img = React.createElement("img",{src:"https://cdn-icons-png.flaticon.com/512/3135/3135715.png",height:"100px",width:"100px"},null)
+         let img_div = React.createElement("div",{
+            style:{
+                height:"150px",
+                width:"100%",
+                margin:"10px auto",
+                display:"flex",
+                justifyContent:"center",
+                alignItems:"center",
+                
+            }
+         },img)
+            let div = React.createElement("div",{
+                style:{
+                    height:"450px",
+                    width:"450px",
+                    margin:"100px auto",
+                    display:"flex",
+                    alignItems:"center",
+                    flexDirection:"column",
+                    boxShadow: "#cdcdcd 0px 0px 5px",
+                    borderRadius: "5px",
+                }
+            },img_div,h1,p1,show_details,btn_div)
+            return div;
+        }
+        ReactDOM.render(cards(),document.getElementById('root'));
+    </script>
+</body>
+</html>
